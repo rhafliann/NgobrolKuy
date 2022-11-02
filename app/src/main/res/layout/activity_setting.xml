@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Setting"
+    android:background="@drawable/gradient_drawable">
+
+    <LinearLayout
+        android:id="@+id/settingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textSize="16pt"
+            android:fontFamily="@font/redhatdisplay_regular"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/Profile1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/settingTitle">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgprofile"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/man"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp">
+        </de.hdodenhof.circleimageview.CircleImageView>
+        <TextView
+            android:id="@+id/nama1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rhafliann"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/imgprofile"
+            android:textSize="10pt"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:ignore="InvalidId" />
+
+        <TextView
+            android:id="@+id/emailprofile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgprofile"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="rhafli.annuralim@mhs.unsoed.ac.id"
+            android:textColor="@color/white"
+            android:textSize="10pt" />
+        <TextView
+            android:id="@+id/pwdprofile"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailprofile"
+            android:text="Rhafli02"
+            android:textSize="10pt"
+            android:textColor="@color/white"
+            tools:ignore="InvalidId" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="32dp"
+            android:backgroundTint="@color/pink"
+            android:layout_below="@id/pwdprofile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp">
+
+            <TextView
+                android:id="@+id/btnsetting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/redhatdisplay_regular"
+                android:text="CHANGE PASSWORD"
+                android:textColor="@color/white"
+                android:textSize="10pt"
+                android:textStyle="bold"
+                tools:ignore="InvalidId" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
